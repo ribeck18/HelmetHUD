@@ -7,7 +7,10 @@ import (
 
 	"tinygo.org/x/drivers/ssd1306"
 	"tinygo.org/x/tinyfont"
+	"tinygo.org/x/tinyfont/freeserif"
 )
+
+var hudFont = &freeserif.Regular9pt7b
 
 func main() {
 	fmt.Println("Hello HUD!")
@@ -31,7 +34,7 @@ func main() {
 	oled.ClearBuffer()
 
 	//write the display in the buffer
-	tinyfont.WriteLine(oled, &tinyfont.Picopixel, 2, 12, "Hello HelmetHUD!", color.RGBA{R: 255, B: 255, G: 255, A: 255})
+	tinyfont.WriteLine(oled, hudFont, 2, 12, "Hello HelmetHUD!", color.RGBA{R: 255, B: 255, G: 255, A: 255})
 
 	//send to the screen
 	if err := oled.Display(); err != nil {
