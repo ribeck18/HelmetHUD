@@ -1,2 +1,43 @@
+# macOS
+.DS_Store
 .ds_store
+
+# Local environment and secrets
 .env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+Secrets.xcconfig
+Local.xcconfig
+
+# Apple signing keys and provisioning profiles
+*.p8
+*.p12
+*.pfx
+*.key
+*.pem
+*.mobileprovision
+*.provisionprofile
+
+# Xcode and Swift build products and per-user settings
+DerivedData/
+xcuserdata/
+*.xcuserstate
+/ios/build/
+.build/
+*.xcarchive
+*.xcresult
+*.ipa
+*.dSYM/
+*.dSYM.zip
+
+# Local TinyGo and Go build products
+/firmware/build/
+/firmware/firmware
+/firmware/*.bin
+/firmware/*.elf
+/firmware/*.hex
+/firmware/*.uf2
+/firmware/*.test
+/firmware/coverage.out
